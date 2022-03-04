@@ -1,5 +1,15 @@
 @import 'reset.css';
 
+/* SETTINGS */
+
+html {
+    --darkblue: #1f2937;
+    --blue: #3882f6;
+    --herowhite: #f9faf8;
+    --white: #e5e7eb;
+    --black: #1f2937;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -12,17 +22,44 @@ img {
     display: block;
     width: 100%;
     height: auto;
+    min-width: 400px;
 }
 
 a {
+    display: block;
     color: inherit;
     text-decoration: none;
 }
 
 p a, li a {
+    display: inline-block;
     color: blue;
     text-decoration: underline;
 }
+
+
+/* BORDERS */
+
+/*header, footer, main {
+    border: 4px solid red;
+}*/
+
+/*section {
+    border: 4px solid lime;
+}*/
+
+/*.graphic {
+    border: 4px solid dodgerblue;
+}*/
+
+/*.graphic :is(.hero-text, picture) {
+    border: 1px solid blue;
+}*/
+
+/*.inner-column {
+    border: 4px solid orange;
+}*/
+
 
 /* STRUCTURE */
 
@@ -39,26 +76,118 @@ main {
 
 .inner-column {
     display: block;
-    border: 4px solid orange;
+    padding: 10px;
+    /**/
+    width: 90%;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+header .inner-column {
     padding: 10px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-header, footer, main {
-    border: 4px solid red;
+footer .inner-column {
+    padding: 10px;
 }
 
-section {
-    border: 4px solid lime;
+/* TYPOGRAPHY */
+
+.hero {
+    font-size: 48px;
+    font-weight: bolder;
+    line-height: .9;
+    color: var(--herowhite);
 }
+
+.small-hero {
+    font-size: 18px;
+    line-height: 1.3;
+    color: var(--white);
+}
+
+/* COMPONENTS */
+
+.button {
+    display: inline-block;
+    background-color: var(--blue);
+    color: #e5e7eb;
+    font-size: 18px;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+
+
+/* MODULES */
+
+.graphic {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.graphic picture {
+
+}
+
+.graphic .hero-text {
+    display: block;
+    padding-top: 40px;
+    padding-right: 90px;
+}
+
+.graphic .hero-text p {
+    margin-top: 10px;
+}
+
+.graphic .hero-text .button {
+    margin-top: 10px;
+}
+
+@media (min-width: 700px)  {
+    .graphic {
+        flex-direction: row-reverse;
+    }
+    .graphic :is(.hero-text, picture) {
+        flex-basis: 50%;
+    }
+}
+
+.logo {
+    color: var(--herowhite);
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
+
+
+ header {
+    background-color: var(--darkblue);
+    color: var(--herowhite);
+}
+
+.intro {
+    background-color: var(--darkblue);
+    color: var(--white);
+}
+
+
+
+
+
+
+
+
+
