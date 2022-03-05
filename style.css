@@ -109,6 +109,14 @@ footer .inner-column {
     color: var(--white);
 }
 
+.information {
+    margin-top: -30px;
+    font-size: 36px;
+    font-weight: bolder;
+    color: var(--black);
+    text-align: center;
+}
+
 /* COMPONENTS */
 
 .button {
@@ -123,7 +131,27 @@ footer .inner-column {
     padding-right: 30px;
 }
 
+.square {
+    display: flex;
+    justify-content: center;
+}
 
+.square div {
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    height: 250px;
+    border: 4px solid #3882f6;
+    margin: 10px;
+    margin-top: 60px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#description {
+    position: relative;
+    top: 100%;
+}
 
 
 /* MODULES */
